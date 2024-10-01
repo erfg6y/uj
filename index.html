@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>mObywatel 2.0</title>
+    <link rel="shortcut icon" href="dowod_files/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#fff">
+    <meta name="next-head-count" content="5">
+    <link rel="preload" href="dowod_files/main.css" as="style">
+    <link rel="preload" href="dowod_files/dowodnowy.css" as="style">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="dowod_files/main.css" data-n-g="">
+    <link rel="manifest" href="manifest.json">
+
+    <noscript data-n-css=""></noscript>
+    <style>
+        body {
+            overscroll-behavior: contain;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            .dzit {
+                margin-bottom: 1.0rem;
+            }
+        }
+
+        .photo {
+            position: relative;
+            filter: grayscale(100%);
+            z-index: 1;
+            display: block;
+        }
+
+        .usun {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+        }
+
+        .usun img {
+            margin-right: 10px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f5f6fa;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 10px 0;
+            box-sizing: border-box;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .bottom-nav-item img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+            object-fit: contain;
+        }
+
+        .bottom-nav-item.active {
+            color: #014a93;
+        }
+
+        .usuwanie {
+            margin: 16px 16px 0 16px;
+            height: 80px;
+            display: flex;
+            background-color: #ffffff;
+            padding: 20px;
+            align-items: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            color: #FF3D3D;
+            font-weight: bold;
+        }
+
+        .usuwanie img:first-of-type:not(.buto img:last-of-type) {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .usuwanie img:last-of-type {
+            margin-left: auto;
+            width: 40px;
+        }
+
+        .spacer {
+            height: 80px;
+            background-color: #f5f6fa;
+        }
+
+        #gradient {
+            position: relative;
+            bottom: 10px;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+            color: #f1f1f1;
+            width: 100%;
+            color: white;
+            font-size: 20px;
+            padding: 6px;
+            text-align: center;
+            z-index: 2;
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin: 0;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+    <link rel="stylesheet" href="dowod_files/dowodnowy.css">
+    <script src="dowod_files/rozwijka.js"></script> <!-- Zmiana ścieżki na lokalną -->
+    <style>
+        @media screen and (orientation: portrait) {
+            body {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="">
+    <header>
+        <a href="dashboard.html"><img src="dowod_files/leftarrow.png" alt="leftarrow"></a> <!-- Zmiana na lokalną -->
+        <p>mDowód</p>
+        <div></div>
+    </header>
+    <p class="czas">Czas: 20:32:33 15.05.2024</p>
+    <main>
+        <section id="lew">
+            <img src="dowod_files/zdjecie.png" class="object-contain w-full rounded-lg photo" style="margin: 0;" alt="Zdjęcie główne"> <!-- Zmiana na zdjęcie główne -->
+            <div id="gradient"></div>
+            <img src="dowod_files/flaga.gif" alt="flaga" id="flaga" style="margin: 0;"> <!-- Zmiana na lokalną -->
+            <div id="rzecz">
+                <img src="dowod_files/godlo.png" alt="godlo" id="godlo"> <!-- Zmiana na lokalną -->
+                <p>Rzeczpospolita<br>Polska</p>
+            </div>
+        </section>
+        <section id="praw">
+            <p>Marcel</p> <!-- Zmiana imienia -->
+            <p class="sub">Imię (Imiona)</p><br>
+            <p>Kotwica</p> <!-- Zmiana nazwiska -->
+            <p class="sub">Nazwisko</p><br>
+            <p>POLSKIE</p>
+            <p class="sub">Obywatelstwo</p><br>
+            <p>03.04.2006</p> <!-- Zmiana daty urodzenia -->
+            <p class="sub">Data urodzenia</p><br>
+            <p>0604035085</p> <!-- Zmiana PESELu -->
+            <p class="sub">Numer PESEL</p><br>
+        </section>
+    </main>
+    <section id="bottom">
+        <img src="dowod_files/checkmark.png" alt="checkmark"> <!-- Zmiana na lokalną -->
+        <p>Dokument ważny</p>
+    </section>
+    <a class="buto">
+        <img src="dowod_files/checkbox.png" alt="checkbox"> <!-- Zmiana na lokalną -->
+        <p>Potwierdź swoje dane</p>
+        <img src="dowod_files/arrow.png" alt="arrow" id="arrow"> <!-- Zmiana na lokalną -->
+    </a>
+    <a class="buto" onclick="wybordokumentumenu()">
+        <img src="dowod_files/card.png" alt="card"> <!-- Zmiana na lokalną -->
+        <p>Dane dokumentu</p>
+        <img src="dowod_files/arrow.png" alt="arrow" id="arrow"> <!-- Zmiana na lokalną -->
+    </a>
+    <section class="collapsible buto" id="lo" style="border-radius: 12px 12px 0px 0px;">
+        <p>Twoje dodatkowe dane</p>
+        <img src="dowod_files/arrow.png" alt="arrow" id="rotation"> <!-- Zmiana na lokalną -->
+    </section>
+    <div id="rogo">
+        <div class="content">
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Nazwisko rodowe</p>
+                <p class="main">Kotwica</p> <!-- Zmiana nazwiska -->
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Płeć</p>
+                <p class="main">Mężczyzna</p>
+            </section>
+            <p class="krecha"></p>
+            <section class="dana">
+                <p class="info">Nazwisko rodowe ojca</p>
+                <p class="main">Kotwica</p> <!-- Zmiana nazwiska -->
+            </section>
+        </div>
+    </div>
+    
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            document.querySelector('.czas').innerText = `Czas: ${now.toLocaleString('pl-PL', options)}`;
+        }
+
+        // Aktualizuj czas co sekundę
+        setInterval(updateTime, 1000);
+        updateTime(); // Po pierwszym załadowaniu
+    </script>
+    
+    <script src="dowod_files/timenew.js"></script> <!-- Jeśli używasz innego skryptu -->
+    <script src="dowod_files/wyszukiwanie.js"></script>
+    <script src="dowod_files/konfiguracja.js"></script>
+</body>
+</html>
